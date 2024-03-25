@@ -1,0 +1,75 @@
+.banner {
+  margin-block: 4rem;
+
+  .banner-card {
+    height: 400px;
+    display: flex;
+
+    .text {
+      background-color: #e9e9e9;
+      flex: 50%;
+      display: grid;
+      place-content: center;
+
+      .text-container {
+        max-width: 400px;
+        padding: 1.6rem;
+
+        h2 {
+          font-size: 1.7rem;
+          line-height: 1.2;
+        }
+
+        p {
+          font-size: clamp(1rem, 3vw, 1.1rem);
+          font-weight: 300;
+          line-height: 1.3;
+          margin-block: 1rem;
+        }
+
+        button {
+          background-color: #000;
+          border: 2px solid #000;
+          color: #fff;
+
+          font-weight: 500;
+          font-size: 1.125rem;
+          padding: 0.5rem 0.8rem;
+          cursor: pointer;
+          transition: all 0.15s;
+
+          &:hover {
+            color: #000;
+            background-color: transparent;
+          }
+        }
+
+        @media (max-width: 748px) {
+          padding: 2rem;
+          max-width: 100%;
+        }
+      }
+    }
+
+    .reverse {
+      order: 2;
+    }
+
+    .image {
+      flex: 50%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+    }
+
+    @media (max-width: 748px) {
+      flex-direction: column;
+      height: auto;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.top-rated {
+  padding-top: 6rem;
+
+  h2 {
+    margin-bottom: 2rem;
+  }
+
+  .loader {
+    min-height: 90vh;
+    display: grid;
+    place-items: center;
+  }
+}
