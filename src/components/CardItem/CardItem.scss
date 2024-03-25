@@ -1,0 +1,52 @@
+.card {
+  outline: 2px solid rgba(0, 0, 0, 0.205);
+  overflow: hidden;
+  transition: outline 0.125s ease-in-out;
+
+  &:hover {
+    outline: 2px solid rgba(0, 0, 0, 1);
+  }
+
+  .image {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    padding: 1rem;
+  }
+
+  .details {
+    padding: 0.8rem;
+
+    h3 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* number of lines to show */
+      line-clamp: 2;
+      -webkit-box-orient: vertical;
+      height: clamp(50px, 9vw, 54px);
+      width: 100%;
+      overflow-wrap: anywhere;
+      font-size: clamp(1rem, 3vw, 1.125rem);
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-weight: 700;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1rem;
+
+      p {
+        font-size: 0.8rem;
+        font-weight: 400;
+        white-space: nowrap;
+      }
+    }
+  }
+}

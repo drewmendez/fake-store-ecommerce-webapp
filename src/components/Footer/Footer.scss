@@ -1,0 +1,22 @@
+footer {
+  background-color: #000000;
+  padding-block: 3rem;
+
+  .wrapper {
+    display: grid;
+    gap: 2rem;
+    place-items: center;
+
+    .footer-links {
+      color: white;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    p {
+      color: white;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.newsletter {
+  background-color: #191919;
+  padding-block: 5rem;
+
+  .wrapper {
+    display: grid;
+    gap: 1rem;
+    place-items: center;
+
+    h2 {
+      font-size: 2rem;
+      color: white;
+    }
+
+    form {
+      display: flex;
+      gap: 0.5rem;
+
+      input {
+        font-family: inherit;
+        font-size: 1rem;
+        outline: none;
+        padding: 0.2rem 0.5rem;
+        width: 100%;
+        min-width: 0;
+      }
+
+      button {
+        background-color: white;
+        border: none;
+        padding: 0.2rem 0.5rem;
+        font-size: 1rem;
+        font-weight: 500;
+        transition: 0.25s;
+
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
