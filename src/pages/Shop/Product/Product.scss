@@ -1,0 +1,132 @@
+.product {
+  display: flex;
+
+  .image {
+    flex: 50%;
+    padding: 1rem;
+
+    img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+    }
+  }
+
+  .details {
+    flex: 50%;
+    display: grid;
+    align-content: space-between;
+    gap: 2rem;
+    background-color: #e5e5e5;
+    padding: 2rem;
+
+    .top {
+      .title {
+        font-weight: 500;
+      }
+
+      .status {
+        display: flex;
+        margin-block: 0.6rem;
+
+        .rating {
+          margin-right: 0.3rem;
+        }
+
+        .stars {
+          padding-top: 2px;
+          padding-right: 8px;
+        }
+
+        .count {
+          padding-left: 8px;
+          border-left: 1px solid black;
+        }
+      }
+
+      .desc {
+        font-weight: 300;
+      }
+    }
+
+    .bottom {
+      .price {
+        font-size: 2.5rem;
+        font-weight: 500;
+      }
+
+      .quantity {
+        display: flex;
+        gap: 1rem;
+        margin-block: 1rem 1.5rem;
+
+        .quantity-control {
+          display: flex;
+          border: 1px solid rgba(1, 1, 1, 0.5);
+          overflow: hidden;
+
+          button {
+            padding-inline: 8px;
+            border: none;
+            outline: 1px solid rgba(1, 1, 1, 0.5);
+            font-size: 1.1rem;
+          }
+
+          .item-count {
+            text-align: center;
+            width: 40px;
+          }
+        }
+      }
+
+      .buttons {
+        display: flex;
+        gap: 1rem;
+
+        button {
+          font-size: 1rem;
+          font-weight: 500;
+          padding: 0.8rem 1.3rem;
+          width: 100%;
+          max-width: 180px;
+
+          &:hover {
+            opacity: 0.7;
+          }
+
+          @media (max-width: 453px) {
+            max-width: none;
+          }
+        }
+
+        .addtocart-btn {
+          flex-wrap: nowrap;
+          border: 2px solid black;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          background-color: transparent;
+
+          svg {
+            font-size: 1.3rem;
+          }
+        }
+
+        .buy-btn {
+          color: white;
+          background-color: #d71414;
+          border: 2px solid #d71414;
+        }
+
+        @media (max-width: 453px) {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 748px) {
+    flex-direction: column;
+  }
+}
