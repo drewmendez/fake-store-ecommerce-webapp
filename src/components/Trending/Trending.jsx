@@ -1,8 +1,8 @@
 import { useRef } from "react";
-import BeatLoader from "react-spinners/BeatLoader";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import { useProducts } from "../../store/productStore";
 import CardItem from "../CardItem/CardItem";
+import BeatLoader from "react-spinners/BeatLoader";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 import "./Trending.scss";
 
 export default function Trending() {

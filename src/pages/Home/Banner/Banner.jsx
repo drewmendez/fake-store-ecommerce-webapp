@@ -1,8 +1,7 @@
 import { Link } from "react-router-dom";
-
-import "./Banner.scss";
 import Banner1 from "../../../assets/banner1.jpg";
 import Banner2 from "../../../assets/banner2.jpg";
+import "./Banner.scss";
 
 const details = {
   reverse: {

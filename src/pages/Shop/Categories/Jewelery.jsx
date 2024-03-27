@@ -1,6 +1,6 @@
+import { useProducts } from "../../../store/productStore";
 import ShopCategories from "../ShopCategories/ShopCategories";
 import ProductGrid from "../../../components/ProductGrid/ProductGrid";
-import { useProducts } from "../../../store/productStore";
 import GridLoader from "react-spinners/GridLoader";
 
 export default function Jewelery() {
