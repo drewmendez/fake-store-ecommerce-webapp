@@ -130,3 +130,21 @@
     flex-direction: column;
   }
 }
+
+.popup {
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 0.7rem;
+  padding-block: 0.8rem 2rem;
+  color: #fff;
+  box-shadow: none !important;
+  border-radius: 0;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  img {
+    width: 70px;
+  }
+}

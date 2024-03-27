@@ -10,7 +10,6 @@ header {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    padding-block: 2rem;
     transition: 0.125s linear;
 
     .menu {
@@ -77,13 +76,19 @@ header {
           border-radius: 50%;
           text-align: center;
           font-size: 0.9rem;
+          animation: 0.4s scale;
+        }
+
+        @keyframes scale {
+          0% {
+            transform: scale(1.3);
+          }
+          100% {
+            transform: scale(1);
+          }
         }
       }
     }
-  }
-
-  .shrink {
-    padding-block: 1rem;
   }
 }
 

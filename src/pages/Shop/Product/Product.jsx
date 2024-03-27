@@ -1,11 +1,16 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useProducts } from "../../../store/productStore";
-import { Rating } from "@smastrom/react-rating";
+import { useCartItems } from "../../../store/cartStore";
+
 import Trending from "../../../components/Trending/Trending";
-import "./Product.scss";
+
 import SquareLoader from "react-spinners/SquareLoader";
+import { Rating } from "@smastrom/react-rating";
 import { BsCartPlus } from "react-icons/bs";
+import Swal from "sweetalert2";
+import CkeckIcon from "../../../assets/check.png";
+import "./Product.scss";
 
 export default function Product() {
   const { productId } = useParams();
@@ -20,15 +25,17 @@ export default function Product() {
           <SquareLoader size={100} color="black" />
         </div>
       ) : (
-        <ProductItem product={product} />
+        <ProductItem key={product.id} product={product} />
       )}
-
       <Trending />
     </>
   );
 }
 
 function ProductItem({ product }) {
+  const [quantity, setQuantity] = useState(1);
+  const addToCart = useCartItems((state) => state.addToCart);
+
   return (
     <section className="product">
       <div className="image">
@@ -53,9 +60,13 @@ function ProductItem({ product }) {
 
         <div className="bottom">
           <h3 className="price">${product.price.toFixed(2)}</h3>
-          <Quantity />
+          <Quantity quantity={quantity} setQuantity={setQuantity} />
           <div className="buttons">
-            <AddToCartButton />
+            <AddToCartButton
+              addToCart={addToCart}
+              product={product}
+              quantity={quantity}
+            />
             <BuyButton />
           </div>
         </div>
@@ -64,9 +75,7 @@ function ProductItem({ product }) {
   );
 }
 
-function Quantity() {
-  const [quantity, setQuantity] = useState(1);
-
+function Quantity({ quantity, setQuantity }) {
   return (
     <div className="quantity">
       <p>Quantity</p>
@@ -83,9 +92,31 @@ function Quantity() {
   );
 }
 
-function AddToCartButton() {
+function AddToCartButton({ addToCart, product, quantity }) {
+  function handleClick() {
+    addToCart(
+      product.id,
+      product.image,
+      product.title,
+      product.price,
+      quantity
+    );
+
+    Swal.fire({
+      position: "center",
+      iconHtml: `<img src="${CkeckIcon}">`,
+      title: "Item has been added to your cart",
+      showConfirmButton: false,
+      backdrop: false,
+      timer: 1500,
+      customClass: {
+        popup: "popup",
+      },
+    });
+  }
+
   return (
-    <button className="addtocart-btn">
+    <button className="addtocart-btn" onClick={handleClick}>
       <BsCartPlus /> Add to Cart
     </button>
   );
