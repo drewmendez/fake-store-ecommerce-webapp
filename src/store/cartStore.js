@@ -28,7 +28,6 @@ export const useCartItems = create((set, get) => ({
     } else {
       set({
         cartItems: [
-          ...get().cartItems,
           {
             id,
             image,
@@ -38,6 +37,7 @@ export const useCartItems = create((set, get) => ({
             quantity,
             total: Number((price * quantity).toFixed(2)),
           },
+          ...get().cartItems,
         ],
       });
       localStorage.setItem("cartItems", JSON.stringify(get().cartItems));
