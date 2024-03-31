@@ -99,6 +99,7 @@ function AddToCartButton({ addToCart, product, quantity }) {
       product.image,
       product.title,
       product.price,
+      product.rating.rate,
       quantity
     );
 

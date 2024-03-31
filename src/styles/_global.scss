@@ -13,3 +13,27 @@ main {
   display: grid;
   place-items: center;
 }
+
+.delete-notify {
+  padding-top: 1rem;
+
+  h2 {
+    font-size: 1.2rem;
+    color: black;
+  }
+
+  .swal2-html-container {
+    font-size: 1rem;
+  }
+
+  button {
+    border-radius: 0 !important;
+    padding: 0.5rem 2rem !important;
+  }
+
+  .no-button {
+    background-color: white !important;
+    color: black;
+    border: 1px solid black;
+  }
+}

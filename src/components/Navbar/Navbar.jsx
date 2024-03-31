@@ -61,7 +61,7 @@ function CartLink() {
   const cartCount = useCartItems((state) => state.cartItems);
 
   return (
-    <Link to="/" className="cart-link">
+    <Link to="/shopping-cart" className="cart-link">
       <PiShoppingCartSimpleLight className="cart-icon" />
       <p className="cart-count" key={cartCount.length}>
         {cartCount.length}

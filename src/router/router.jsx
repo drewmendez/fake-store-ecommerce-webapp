@@ -8,6 +8,7 @@ import Womens from "../pages/Shop/Categories/Womens";
 import Jewelery from "../pages/Shop/Categories/Jewelery";
 import Electronics from "../pages/Shop/Categories/Electronics";
 import Product from "../pages/Shop/Product/Product";
+import ShoppingCart from "../pages/ShoppingCart/ShoppingCart";
 
 const router = createBrowserRouter([
   {
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
             element: <Product />,
           },
         ],
+      },
+      {
+        path: "/shopping-cart",
+        element: <ShoppingCart />,
       },
     ],
   },
