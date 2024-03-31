@@ -46,7 +46,6 @@ export default function Navbar() {
             </div>
 
             <div className="right">
-              <IoIosSearch className="search-icon" />
               <CartLink />
             </div>
           </div>
