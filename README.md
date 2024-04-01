@@ -1,8 +1,15 @@
-# React + Vite
+# Fake Store E-commerce Web App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a front end only e-commerce web application that fetches products from [fake store api](https://fakestoreapi.com/products) and uses localstorage to store shopping cart items.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Sort products by category
+- View individual products
+- Add product to shopping cart
+- Remove product from shopping cart
+
+## Built with
+
+» React Js  
+» SASS
