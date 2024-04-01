@@ -9,10 +9,12 @@ import Jewelery from "../pages/Shop/Categories/Jewelery";
 import Electronics from "../pages/Shop/Categories/Electronics";
 import Product from "../pages/Shop/Product/Product";
 import ShoppingCart from "../pages/ShoppingCart/ShoppingCart";
+import NotFound from "../pages/NotFound/NotFound";
 
 const router = createBrowserRouter([
   {
     element: <RootLayout />,
+    errorElement: <NotFound />,
     children: [
       {
         path: "/",
