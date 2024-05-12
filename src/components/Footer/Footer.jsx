@@ -14,14 +14,13 @@ export default function Footer() {
             <a href="#">Contact Us</a>
           </div>
           <p>
-            Design &nbsp; by{" "}
+            Design Reference :{" "}
             <a
               target="_blank"
-              rel="noreferrer"
               style={{ color: "white" }}
-              href="https://github.com/Abderraouf-Rahmani"
+              href="https://raouf.vercel.app"
             >
-              &nbsp; Abderraouf
+              Raouf Store
             </a>
           </p>
         </div>
