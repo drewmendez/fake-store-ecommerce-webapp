@@ -4,7 +4,8 @@ export const useProducts = create((set) => ({
   products: [],
   isLoading: false,
   fetchProducts: async () => {
-    const URL = "https://fakestoreapi.com/products";
+    // const URL = "https://fakestoreapi.com/products";
+    const URL = "https://dummyjson.com/products";
 
     set({ isLoading: true });
     try {
@@ -15,7 +16,7 @@ export const useProducts = create((set) => ({
         console.log("404");
       }
 
-      set({ products: data });
+      set({ products: data.products });
     } catch (error) {
       console.log("error");
     } finally {

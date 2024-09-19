@@ -18,6 +18,8 @@ export default function Product() {
     (item) => item.id === parseInt(productId)
   );
 
+  console.log(product);
+
   return (
     <>
       {product === undefined ? (
@@ -39,21 +41,21 @@ function ProductItem({ product }) {
   return (
     <section className="product">
       <div className="image">
-        <img src={product.image} />
+        <img src={product.images[0]} />
       </div>
       <div className="details">
         <div className="top">
           <h2 className="title">{product.title}</h2>
           <div className="status">
-            <p className="rating">{product.rating.rate.toFixed(1)}</p>
+            <p className="rating">{product.rating}</p>
             <div className="stars">
               <Rating
                 readOnly
                 style={{ maxWidth: 90, width: "100%" }}
-                value={product.rating.rate}
+                value={product.rating}
               />
             </div>
-            <p className="count">{product.rating.count} sold</p>
+            <p className="count">{product.stock} in stock</p>
           </div>
           <p className="desc">{product.description}</p>
         </div>
@@ -96,10 +98,10 @@ function AddToCartButton({ addToCart, product, quantity }) {
   function handleClick() {
     addToCart(
       product.id,
-      product.image,
+      product.images[0],
       product.title,
       product.price,
-      product.rating.rate,
+      product.rating,
       quantity
     );
 

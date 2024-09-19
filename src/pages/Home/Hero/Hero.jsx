@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 
-import Menbg from "../../../assets/mens-bg.jpg";
-import Womenbg from "../../../assets/womens-bg.jpg";
-import Jewelrybg from "../../../assets/jewelry-bg.jpg";
-import Electronicsbg from "../../../assets/electronics-bg.jpg";
+import GroceriesBg from "../../../assets/groceries.jpg";
+import BeautyBg from "../../../assets/beauty.jpg";
+import FragrancesBg from "../../../assets/fragrances.jpg";
+import FurnitureBg from "../../../assets/furniture.jpg";
 import "./Hero.scss";
 
 export default function Hero() {
@@ -12,34 +12,34 @@ export default function Hero() {
       <div className="wrapper">
         <div
           className="hero-card men"
-          style={{ backgroundImage: `url(${Menbg})` }}
+          style={{ backgroundImage: `url(${GroceriesBg})` }}
         >
-          <Link to="/shop/men's clothing">
-            <p>Men's Clothing</p>
+          <Link to="/shop/groceries">
+            <p>Groceries</p>
           </Link>
         </div>
         <div
           className="hero-card women"
-          style={{ backgroundImage: `url(${Womenbg})` }}
+          style={{ backgroundImage: `url(${BeautyBg})` }}
         >
-          <Link to="/shop/women's clothing">
-            <p>Women's Clothing</p>
+          <Link to="/shop/beauty">
+            <p>Beauty Products</p>
           </Link>
         </div>
         <div
           className="hero-card jewelry"
-          style={{ backgroundImage: `url(${Jewelrybg})` }}
+          style={{ backgroundImage: `url(${FragrancesBg})` }}
         >
-          <Link to="/shop/jewelery">
-            <p>Jewelry</p>
+          <Link to="/shop/fragrances">
+            <p>Fragrances</p>
           </Link>
         </div>
         <div
           className="hero-card electronics"
-          style={{ backgroundImage: `url(${Electronicsbg})` }}
+          style={{ backgroundImage: `url(${FurnitureBg})` }}
         >
-          <Link to="/shop/electronics">
-            <p>Electronics</p>
+          <Link to="/shop/furniture">
+            <p>Furnitures</p>
           </Link>
         </div>
       </div>

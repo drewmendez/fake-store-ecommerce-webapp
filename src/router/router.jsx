@@ -3,10 +3,10 @@ import RootLayout from "../layouts/RootLayout";
 import Home from "../pages/Home/Home";
 import Shop from "../pages/Shop/Shop";
 import All from "../pages/Shop/Categories/All";
-import Mens from "../pages/Shop/Categories/Mens";
-import Womens from "../pages/Shop/Categories/Womens";
-import Jewelery from "../pages/Shop/Categories/Jewelery";
-import Electronics from "../pages/Shop/Categories/Electronics";
+import Groceries from "../pages/Shop/Categories/Groceries";
+import Beauty from "../pages/Shop/Categories/Beauty";
+import Fragrances from "../pages/Shop/Categories/Fragrances";
+import Furniture from "../pages/Shop/Categories/Furniture";
 import Product from "../pages/Shop/Product/Product";
 import ShoppingCart from "../pages/ShoppingCart/ShoppingCart";
 import NotFound from "../pages/NotFound/NotFound";
@@ -29,20 +29,20 @@ const router = createBrowserRouter([
             element: <All />,
           },
           {
-            path: "/shop/men's clothing",
-            element: <Mens />,
+            path: "/shop/groceries",
+            element: <Groceries />,
           },
           {
-            path: "/shop/women's clothing",
-            element: <Womens />,
+            path: "/shop/beauty",
+            element: <Beauty />,
           },
           {
-            path: "/shop/jewelery",
-            element: <Jewelery />,
+            path: "/shop/fragrances",
+            element: <Fragrances />,
           },
           {
-            path: "/shop/electronics",
-            element: <Electronics />,
+            path: "/shop/furniture",
+            element: <Furniture />,
           },
           {
             path: "/shop/:productId",

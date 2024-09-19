@@ -8,20 +8,20 @@ const CATEGORIES = [
     link: "",
   },
   {
-    text: "Men's",
-    link: "/men's clothing",
+    text: "Groceries",
+    link: "/groceries",
   },
   {
-    text: "Women's",
-    link: "/women's clothing",
+    text: "Beauty",
+    link: "/beauty",
   },
   {
-    text: "Jewelery",
-    link: "/jewelery",
+    text: "Fragrances",
+    link: "/fragrances",
   },
   {
-    text: "Electronics",
-    link: "/electronics",
+    text: "Furniture",
+    link: "/furniture",
   },
 ];
 

@@ -3,9 +3,9 @@ import ShopCategories from "../ShopCategories/ShopCategories";
 import ProductGrid from "../../../components/ProductGrid/ProductGrid";
 import GridLoader from "react-spinners/GridLoader";
 
-export default function Jewelery() {
+export default function Fragrances() {
   const jeweleryProducts = useProducts((state) => state.products).filter(
-    (product) => product.category === "jewelery"
+    (product) => product.category === "fragrances"
   );
   const isLoading = useProducts((state) => state.isLoading);
 

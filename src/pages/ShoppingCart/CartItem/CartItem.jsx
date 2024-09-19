@@ -15,7 +15,7 @@ export default function CartItem({ cartItem }) {
           </Link>
           <p className="price">${cartItem.price.toFixed(2)}</p>
           <div className="status">
-            <p className="rating">{cartItem.rate.toFixed(1)}</p>
+            <p className="rating">{cartItem.rate}</p>
             <div className="stars">
               <Rating
                 readOnly

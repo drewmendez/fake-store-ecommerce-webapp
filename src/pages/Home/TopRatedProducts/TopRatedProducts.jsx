@@ -5,7 +5,7 @@ import "./TopRatedProducts.scss";
 
 export default function TopRatedProducts() {
   const topRatedProducts = useProducts((state) => state.products).filter(
-    (product) => product.rating.rate >= 4 || product.rating.rate === 3.8
+    (product) => product.rating >= 4.4
   );
   const isLoading = useProducts((state) => state.isLoading);
 

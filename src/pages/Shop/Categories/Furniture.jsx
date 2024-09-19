@@ -3,9 +3,9 @@ import ShopCategories from "../ShopCategories/ShopCategories";
 import ProductGrid from "../../../components/ProductGrid/ProductGrid";
 import GridLoader from "react-spinners/GridLoader";
 
-export default function Womens() {
-  const womensProducts = useProducts((state) => state.products).filter(
-    (product) => product.category === "women's clothing"
+export default function Furniture() {
+  const electronicsProducts = useProducts((state) => state.products).filter(
+    (product) => product.category === "furniture"
   );
   const isLoading = useProducts((state) => state.isLoading);
 
@@ -17,7 +17,7 @@ export default function Womens() {
           <GridLoader size={15} color="black" />
         </div>
       ) : (
-        <ProductGrid products={womensProducts} />
+        <ProductGrid products={electronicsProducts} />
       )}
     </>
   );

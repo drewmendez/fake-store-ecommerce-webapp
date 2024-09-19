@@ -7,7 +7,7 @@ export default function CardItem({ product }) {
   return (
     <div className="card">
       <Link to={`/shop/${product.id}`}>
-        <img className="image" src={product.image} />
+        <img className="image" src={product.images[0]} />
         <div className="details">
           <h3>{product.title}</h3>
 
@@ -16,9 +16,9 @@ export default function CardItem({ product }) {
             <Rating
               readOnly
               style={{ maxWidth: 70, width: "100%" }}
-              value={product.rating.rate}
+              value={product.rating}
             />
-            <p>{product.rating.count} sold</p>
+            <p>{product.rating}</p>
           </div>
         </div>
       </Link>

@@ -1,6 +1,6 @@
 # Fake Store E-commerce Web App
 
-This is a front end only e-commerce web application that fetches products from [fake store api](https://fakestoreapi.com/products) and uses localstorage to store shopping cart items.
+This is a front end only e-commerce web application that fetches products from [DummyJSON](https://dummyjson.com/products) and uses localstorage to store shopping cart items.
 
 ## Features
 

@@ -7,7 +7,7 @@ import "./Trending.scss";
 
 export default function Trending() {
   const trendingProducts = useProducts((state) => state.products).filter(
-    (product) => product.rating.count > 300
+    (product) => product.stock < 15
   );
   const isLoading = useProducts((state) => state.isLoading);
   const carouselRef = useRef();

@@ -3,9 +3,9 @@ import ShopCategories from "../ShopCategories/ShopCategories";
 import ProductGrid from "../../../components/ProductGrid/ProductGrid";
 import GridLoader from "react-spinners/GridLoader";
 
-export default function Mens() {
-  const mensProducts = useProducts((state) => state.products).filter(
-    (product) => product.category === "men's clothing"
+export default function Beauty() {
+  const womensProducts = useProducts((state) => state.products).filter(
+    (product) => product.category === "beauty"
   );
   const isLoading = useProducts((state) => state.isLoading);
 
@@ -17,7 +17,7 @@ export default function Mens() {
           <GridLoader size={15} color="black" />
         </div>
       ) : (
-        <ProductGrid products={mensProducts} />
+        <ProductGrid products={womensProducts} />
       )}
     </>
   );
